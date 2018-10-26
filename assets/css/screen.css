@@ -42,10 +42,6 @@ h1, h2, h3, h4 {
   font-weight: 500;
 }
 
-.employer {
-  font-family: "Bai Jamjuree", Roboto, Calibri, Helvetica, sans-serif;
-}
-
 h1 {
   font-size: 5.063em; /* 91.134 / 18 = 5.063 */
   line-height: 1.204291658em; /* 110 / 91.134 = 1.204291658 */
@@ -60,7 +56,7 @@ h2 {
 h3 {
   font-size: 2.25em;  /* 40.500 / 18 = 2.250 */
   line-height: 1.086419753em; /* 44  / 40.500 = 1.086419753 */
-  padding-bottom: 0.5em;
+  padding-bottom: 0.543209877em; /* 1.086419753 / 2 = 0.543209877 */
   text-align: center;
   text-decoration: underline;
 }
@@ -80,17 +76,6 @@ img {
   max-width: 100%;
 }
 
-.images {
-  background: #222;
-  overflow: auto;
-  padding: 0.277777778em; /* 5 / 18 = 0.277777778 */
-}
-
-.images li {
-  box-sizing: border-box;
-  padding: 0.277777778em; /* 3 / 18 = 0.277777778 */
-}
-
 figcaption {
   background-color: #222;
   color: #EEE;
@@ -103,5 +88,18 @@ figcaption {
 /* Layout (id selectors; width/height, position, flexbox, grid)*/
 
 /* Module/Modular Section (class or descedent selectors; repeating specific styles) */
+.employer {
+  font-family: "Bai Jamjuree", Roboto, Calibri, Helvetica, sans-serif;
+}
 
+.images {
+  background: #222;
+  overflow: auto;
+  padding: 0.277777778em; /* 5 / 18 = 0.277777778 */
+}
+
+.images li {
+  box-sizing: border-box;
+  padding: 0.277777778em; /* 3 / 18 = 0.277777778 */
+}
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
