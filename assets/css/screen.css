@@ -8,7 +8,14 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* stylelint-enable */
 
 /* Custom Site Styles */
+/* Comments and Notes */
+
 /*  */
+
+/* Base Styles (element selectors; color, typography, and that's it)*/
+/* Layout (id selectors; width/height, position, flexbox, grid) */
+/* Module/Modular Section (class or descedent selectors; repeating specific styles) */
+/* State (repeat the structure above; media queries, JavaScript-dependent styles) */
 
 /* Maths */
 /*      font-size      *//*         line-height        *//* elmt */
@@ -24,7 +31,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* NOTE: even after tying to install it diffrent ways and making .stylelinrc */
 /* NOTE: the command stylelint is still not present*/
 
-
 /* Base Styles (element selectors; color, typography, and that's it)*/
 html {
   background-color: #DDD;
@@ -34,6 +40,7 @@ html {
   font-size: 1.125em;
   font-weight: 400;
   line-height: 1.222222222em;
+  overflow-wrap: break-word;
   padding: 1.222222222em 1em;
 }
 
@@ -43,9 +50,9 @@ h1, h2, h3, h4 {
 }
 
 h1, h2 {
-  font-size: 3.375em; /* 60.750 / 18 = 3.375 */
-  line-height: 1.448559671em; /* 88  / 60.750 = 1.448559671 */
-  word-wrap: break-word;
+  font-size: 2.25em;  /* 40.500 / 18 = 2.250 */
+  line-height: 1.086419753em; /* 44  / 40.500 = 1.086419753 */
+  padding-bottom: 0.543209877em; /* 1.086419753 / 2 = 0.543209877 */
 }
 
 h3 {
@@ -107,11 +114,27 @@ li ol, li ul {
 .job-achievements, .leadership {
   list-style-type: circle;
 }
+
+.degrees {
+  font-weight: 600;
+}
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
+@media screen and (min-width: 322px) {
+  h1, h2 {
+    font-size: 3.375em; /* 60.750 / 18 = 3.375 */
+    line-height: 1.448559671em; /* 88  / 60.750 = 1.448559671 */
+    overflow-wrap: normal;
+    padding: inherit;
+  }
+}
+
 @media screen and (min-width: 460px) {
   h1 {
     font-size: 5.063em; /* 91.134 / 18 = 5.063 */
     line-height: 1.204291658em; /* 110 / 91.134 = 1.204291658 */
-    word-wrap: break-word;
   }
+}
+
+@media screen and (min-width: 460px) {
+
 }
