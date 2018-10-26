@@ -34,7 +34,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* Base Styles (element selectors; color, typography, and that's it)*/
 html {
   background-color: #DDD;
-  background-image: url(/assets/img/baseline.png);
+  -background-image: url(/assets/img/baseline.png);
   color: #222;
   font-family: Roboto, "Bai Jamjuree", Calibri, Helvetica, sans-serif;
   font-size: 1.125em;
@@ -120,6 +120,7 @@ li ol, li ul {
 }
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
 @media screen and (min-width: 322px) {
+  /* Module/Modular Section */
   h1, h2 {
     font-size: 3.375em; /* 60.750 / 18 = 3.375 */
     line-height: 1.448559671em; /* 88  / 60.750 = 1.448559671 */
@@ -129,12 +130,41 @@ li ol, li ul {
 }
 
 @media screen and (min-width: 460px) {
+  /* Base Styles */
   h1 {
     font-size: 5.063em; /* 91.134 / 18 = 5.063 */
     line-height: 1.204291658em; /* 110 / 91.134 = 1.204291658 */
   }
 }
 
-@media screen and (min-width: 460px) {
+@media screen and (min-width: 586px) {
+  /* Base Styles */
+  html {
+    margin: 10vw;
+  }
+}
 
+@media screen and (min-width: 736px) {
+  /* Base Styles */
+  html {
+    margin: 20vw;
+  }
+}
+
+@media screen and (min-width: 1072px) {
+  /* Base Styles */
+  html {
+    margin: inherit;
+  }
+  /* Layout  */
+  #schools {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  /* Module/Modular Section  */
+  #schools li {
+    flex: 1 0 auto;
+    width: 50%;
+  }
 }
