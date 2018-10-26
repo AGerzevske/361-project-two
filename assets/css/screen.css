@@ -74,7 +74,6 @@ img {
 figcaption {
   background-color: #222;
   color: #EEE;
-  font: italic smaller inherit;
   padding: 0.166666667em; /* 3 / 18 = 0.166666667 */
   text-align: center;
 }
@@ -105,7 +104,7 @@ li ol, li ul {
   padding: 0.277777778em; /* 3 / 18 = 0.277777778 */
 }
 
-.job-achievements, .leadership{
+.job-achievements, .leadership {
   list-style-type: circle;
 }
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
