@@ -37,11 +37,11 @@ html {
   -background-image: url(/assets/img/baseline.png);
   color: #222;
   font-family: Roboto, "Bai Jamjuree", Calibri, Helvetica, sans-serif;
-  font-size: 1.125em;
+  font-size: 1.125em;/* 18.000 / 16 = 1.125 */
   font-weight: 400;
-  line-height: 1.222222222em;
+  line-height: 1.222222222em;/* 22  / 18.000 = 1.222222222 */
   overflow-wrap: break-word;
-  padding: 1.222222222em 1em;
+  padding: 1.222222222em 1em;/* TODO: whats this doing? */
 }
 
 h1, h2, h3, h4 {
@@ -73,7 +73,7 @@ small {
   line-height: 1.376145261em; /* 22  / 12.006 = 1.376145261 */
 }
 
-img {
+audio, img, video {
   display: block;
   max-width: 100%;
 }
@@ -88,7 +88,7 @@ figcaption {
 /* Layout (id selectors; width/height, position, flexbox, grid) */
 
 /* Module/Modular Section (class or descedent selectors; repeating specific styles) */
-ol, ul, li {
+li, ol, ul {
   padding-bottom: 0.611111111em; /* 1.222222222 / 2 = 0.611111111 */
 }
 
