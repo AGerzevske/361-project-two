@@ -42,17 +42,18 @@ html {
   font-weight: 400;
   line-height: 1.222222222em;/* 22  / 18.000 = 1.222222222 */
   overflow-wrap: break-word;
-  padding: 1.222222222em 1em;/* TODO: whats this doing? */
+  padding: 1.222222222em 1.222222222em;/* TODO: whats this doing? */
 }
 /*  */
 header {
   background-color: orange;
   display: flex;
   flex-flow: column wrap;
+  border-radius: 0.611111111em 0.611111111em 0.611111111em 0.611111111em;
 }
+
 h1 {
-  align-self: left;
-  padding-left: 0.305555555em;
+  padding: 0em 0.305555555em;
 }
 
 .nav-menu {
@@ -64,9 +65,8 @@ h1 {
 }
 
 .nav-item {
-  background: green;
   text-align: center;
-  padding: 0em;
+  padding: 0em 0.814814815em;
 }
 
 .nav-item a:hover {
@@ -81,15 +81,31 @@ h1 {
   display: inherit;
   text-align: center;
   text-decoration: none;
-
   color: #222;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.629629630em;
+  font-family: "Bai Jamjuree", Roboto, Calibri, Helvetica, sans-serif;
+  font-weight: 400;
+
+  border-radius: .5em;
+}
+
+header address {
+  background: orange;
+  border-radius: 0 0 0.611111111em 0.611111111em;
   font-size: 1.125em;/* 18.000 / 16 = 1.125 */
   font-weight: 400;
   line-height: 1.222222222em;/* 22  / 18.000 = 1.222222222 */
-  padding: 0.666666667em 1em 0.666666667em 1em;
-  font-family: "Bai Jamjuree", Roboto, Calibri, Helvetica, sans-serif;
-  font-weight: 400;
-}/* top | right | bottom | left */
+  padding: 0.611111111em 0.5625em 0.611111111em 0.5625em;
+}
+header address ol {
+  padding: 0;
+}
+header address ol li {
+  padding: 0;
+}
+  /* top | right | bottom | left */
 
 h1, h2, h3, h4 {
   -background-color: yellow;
@@ -100,7 +116,7 @@ h1, h2, h3, h4 {
 
 h1, h2, h3 {
   font-size: 2.25em;  /* 40.500 / 18 = 2.250 */
-  line-height: 1.35802469em; /* 55  / 40.500 = 1.086419753 */
+  line-height: 1.629629629em; /* 66  / 40.500 = 1.086419753 */
 }
 
 h4 {
@@ -163,13 +179,13 @@ li ol, li ul {
 /* Border-raidus */
 
 
-@media screen and (min-width: 366px) {
+@media screen and (min-width: 388px) {
   /* Module/Modular Section */
   .nav-menu {
     flex-flow: row wrap;
   }
 }
-@media screen and (min-width: 536px) {
+@media screen and (min-width: 582px) {
     /* Base Styles */
     h1, h2 {
       font-size: 3.375em; /* 60.750 / 18 = 3.375 */
@@ -178,7 +194,7 @@ li ol, li ul {
     }
 }
 
-@media screen and (min-width: 776px) {
+@media screen and (min-width: 840px) {
     /* Base Styles */
   h1 {
     font-size: 5.063em; /* 91.134 / 18 = 5.063 */
