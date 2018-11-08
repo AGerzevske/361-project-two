@@ -25,6 +25,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* 40.500 / 18 = 2.250 *//* 44  / 40.500 = 1.086419753 *//*  h3  */
 /* 27.000 / 18 = 1.500 *//* 44  / 27.000 = 1.629629630 *//*  h4  */
 /* 12.006 / 18 = 0.667 *//* 22  / 12.006 = 1.376145261 *//*  sm  */
+/* top | right | bottom | left */
 
 /* NOTE: I had to do sudo npm i -g stylelint@8.4.0 since */
 /* NOTE: stylelint refeuses to install on my machine using info from its github page*/
@@ -33,8 +34,8 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /* Base Styles (element selectors; color, typography, and that's it)*/
 html {
-  background-color: #DDD;
-  -background-image: url(/assets/img/baseline.png);
+  -background-color: #DDD;
+  background-image: url(/assets/img/baseline.png);
   color: #222;
   font-family: Roboto, "Bai Jamjuree", Calibri, Helvetica, sans-serif;
   font-size: 1.125em;/* 18.000 / 16 = 1.125 */
@@ -43,24 +44,63 @@ html {
   overflow-wrap: break-word;
   padding: 1.222222222em 1em;/* TODO: whats this doing? */
 }
+/*  */
+header {
+  background-color: orange;
+  display: flex;
+  flex-flow: column wrap;
+}
+h1 {
+  align-self: left;
+  padding-left: 0.305555555em;
+}
+
+.nav-menu {
+  background-color: green;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  padding: 0em;
+}
+
+.nav-item {
+  background: green;
+  text-align: center;
+  padding: 0em;
+}
+
+.nav-item a:hover {
+  background-color: #33cc33;
+}
+.nav-item a:active {
+  background-color: #70db70;
+}
+
+.nav-item a {
+  -background: blue;
+  display: inherit;
+  text-align: center;
+  text-decoration: none;
+
+  color: #222;
+  font-size: 1.125em;/* 18.000 / 16 = 1.125 */
+  font-weight: 400;
+  line-height: 1.222222222em;/* 22  / 18.000 = 1.222222222 */
+  padding: 0.666666667em 1em 0.666666667em 1em;
+  font-family: "Bai Jamjuree", Roboto, Calibri, Helvetica, sans-serif;
+  font-weight: 400;
+}/* top | right | bottom | left */
 
 h1, h2, h3, h4 {
+  -background-color: yellow;
   font-family: "Bai Jamjuree", Roboto, Calibri, Helvetica, sans-serif;
   font-weight: 500;
 }
+/*  */
 
-h1, h2 {
+h1, h2, h3 {
   font-size: 2.25em;  /* 40.500 / 18 = 2.250 */
-  line-height: 1.086419753em; /* 44  / 40.500 = 1.086419753 */
-  padding-bottom: 0.543209877em; /* 1.086419753 / 2 = 0.543209877 */
-}
-
-h3 {
-  font-size: 2.25em;  /* 40.500 / 18 = 2.250 */
-  line-height: 1.086419753em; /* 44  / 40.500 = 1.086419753 */
-  padding-bottom: 0.543209877em; /* 1.086419753 / 2 = 0.543209877 */
-  text-align: center;
-  text-decoration: underline;
+  line-height: 1.35802469em; /* 55  / 40.500 = 1.086419753 */
 }
 
 h4 {
@@ -119,43 +159,36 @@ li ol, li ul {
   font-weight: 600;
 }
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
-@media screen and (min-width: 322px) {
+
+/* Border-raidus */
+
+
+@media screen and (min-width: 366px) {
   /* Module/Modular Section */
-  h1, h2 {
-    font-size: 3.375em; /* 60.750 / 18 = 3.375 */
-    line-height: 1.448559671em; /* 88  / 60.750 = 1.448559671 */
-    overflow-wrap: normal;
-    padding: inherit;
+  .nav-menu {
+    flex-flow: row wrap;
   }
 }
+@media screen and (min-width: 536px) {
+    /* Base Styles */
+    h1, h2 {
+      font-size: 3.375em; /* 60.750 / 18 = 3.375 */
+      line-height: 1.448559671em; /* 88  / 60.750 = 1.448559671 */
+      overflow-wrap: normal;
+    }
+}
 
-@media screen and (min-width: 460px) {
-  /* Base Styles */
+@media screen and (min-width: 776px) {
+    /* Base Styles */
   h1 {
     font-size: 5.063em; /* 91.134 / 18 = 5.063 */
     line-height: 1.204291658em; /* 110 / 91.134 = 1.204291658 */
   }
 }
 
-@media screen and (min-width: 586px) {
-  /* Base Styles */
-  html {
-    margin: 10vw;
-  }
-}
-
-@media screen and (min-width: 736px) {
-  /* Base Styles */
-  html {
-    margin: 20vw;
-  }
-}
-
 @media screen and (min-width: 1072px) {
   /* Base Styles */
-  html {
-    margin: inherit;
-  }
+
   /* Layout  */
   #schools {
     display: flex;
