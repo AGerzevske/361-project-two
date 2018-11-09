@@ -12,7 +12,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* If you need more, that's where to get'em.                */
 /* ======================================================== */
 
-/* Custom Site Styles */
+/* End of not mine*/
 /* Comments and Notes */
 
 /*  */
@@ -29,31 +29,36 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /* Maths */
 /*      font-size      *//*         line-height        *//* elmt */
+/* 12.006 / 18 = 0.667 *//* 22  / 12.006 = 1.376145261 *//*  sm  */
 /* 18.000 / 16 = 1.125 *//* 22  / 18.000 = 1.222222222 *//* html */
 /* 22.78125 / 18 = 1.265625 *//* 33  / 22.78125 = 1.448559670 *//* midl */
-/* 91.134 / 18 = 5.063 *//* 110 / 91.134 = 1.204291658 *//*  h1  */
+/* 27.000 / 18 = 1.500 *//* 44  / 27.000 = 1.629629629 *//*  h4  */
+/* 40.500 / 18 = 2.250 *//* 66  / 40.500 = 1.629629629 *//*  h3  */
 /* 60.750 / 18 = 3.375 *//* 88  / 60.750 = 1.448559671 *//*  h2  */
-/* 40.500 / 18 = 2.250 *//* 44  / 40.500 = 1.086419753 *//*  h3  */
-/* 27.000 / 18 = 1.500 *//* 44  / 27.000 = 1.629629630 *//*  h4  */
-/* 12.006 / 18 = 0.667 *//* 22  / 12.006 = 1.376145261 *//*  sm  */
+/* 91.134 / 18 = 5.063 *//* 110 / 91.134 = 1.204291658 *//*  h1  */
+/* 1.222222222 / 2 = 0.611111111 */
+/* 1.222222222 / 4 = 0.305555555 */
+/* 1.629629629 / 2 = 0.814814815 */
+
 /* top | right | bottom | left */
 
+/* Custom Site Styles */
 /* Base Styles (element selectors; color, typography, and that's it)*/
 html {
   /* background-image: url(/assets/img/baseline.png); */
   background-image: url(/assets/img/escheresque_ste.png);
   color: #222;
   font-family: Roboto, "Bai Jamjuree", Calibri, Helvetica, sans-serif;
-  font-size: 1.125em;/* 18.000 / 16 = 1.125 */
+  font-size: 1.125em; /* 18.000 / 16 = 1.125 */
   font-weight: 400;
-  line-height: 1.222222222em;/* 22  / 18.000 = 1.222222222 */
+  line-height: 1.222222222em; /* 22  / 18.000 = 1.222222222 */
   overflow-wrap: break-word;
-  padding: 1.222222222em 1.222222222em;/* TODO: whats this doing? */
+  padding: 1.222222222em 1.222222222em; /* 22  / 18.000 = 1.222222222 */
 }
 
 header {
   background-color: #A43A3D;
-  border-radius: 0.611111111em 0.611111111em 0 0;
+  border-radius: 0.611111111em 0.611111111em 0 0; /* 1.222222222 / 2 = 0.611111111 */
   display: flex;
   flex-flow: column wrap;
   min-height: 0;
@@ -63,8 +68,8 @@ header {
 
 main {
   background-color: #DDD;
-  padding: 0 1.222222222em 0 1.222222222em;
-  border-radius: 0 0 0.611111111em 0.611111111em;
+  border-radius: 0 0 0.611111111em 0.611111111em; /* 1.222222222 / 2 = 0.611111111 */
+  padding: 0 1.222222222em 0 1.222222222em; /* 22  / 18.000 = 1.222222222 */
 }
 
 h1,
@@ -79,16 +84,20 @@ h1,
 h2,
 h3 {
   font-size: 2.25em;  /* 40.500 / 18 = 2.250 */
-  line-height: 1.629629629em; /* 66  / 40.500 = 1.086419753 */
+  line-height: 1.629629629em; /* 66  / 40.500 = 1.629629629 */
 }
 
 h1 {
-  padding: 0 0.305555555em;
+  padding: 0 0.305555555em; /* 1.222222222 / 4 = 0.305555555 */
+}
+
+h3 {
+  text-decoration: underline;
 }
 
 h4 {
   font-size: 1.5em;   /* 27.000 / 18 = 1.500 */
-  line-height: 1.62962963em;  /* 44  / 27.000 = 1.629629630 */
+  line-height: 1.62962963em;  /* 44  / 27.000 = 1.62962963 */
 }
 
 small {
@@ -97,7 +106,7 @@ small {
 }
 
 p {
-  padding-bottom: 1.222222222em;
+  padding-bottom: 1.222222222em; /* 22  / 18.000 = 1.222222222 */
 }
 
 audio,
@@ -134,25 +143,25 @@ li ul {
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;
-  padding: 0;
   min-height: 0;
   min-width: 0;
   overflow: hidden;
+  padding: 0;
 }
 
 .nav-item { /* nav-menu li */
-  padding: 0 0.814814815em;
+  padding: 0 0.814814815em; /* 1.629629629 / 2 = 0.814814815 */
   text-align: center;
 }
 
 .nav-item a {
-  border-radius: 0.55em;
+  border-radius: 0.55em; /* Just looks good */
   color: #222;
   display: inherit;
   font-family: "Bai Jamjuree", Roboto, Calibri, Helvetica, sans-serif;
-  font-size: 1.5em;
+  font-size: 1.5em; /* 27.000 / 18 = 1.500 */
   font-weight: 400;
-  line-height: 1.62962963em;
+  line-height: 1.62962963em; /* 44  / 27.000 = 1.629629629 */
   text-align: center;
   text-decoration: none;
 }
@@ -185,17 +194,17 @@ li ul {
 }
 
 .images li {
-  box-sizing: border-box;
   border-radius: 0.611111111em;
+  box-sizing: border-box;
   padding: 0.277777778em; /* 5 / 18 = 0.277777778 */
 }
 
 header address {
   background-color: #A43A3D;
-  font-size: 1.125em;/* 18.000 / 16 = 1.125 */
+  font-size: 1.125em; /* 18.000 / 16 = 1.125 */
   font-weight: 400;
-  line-height: 1.222222222em;/* 22  / 18.000 = 1.222222222 */
-  padding: 0.611111111em 0.5625em 0.611111111em 0.5625em;
+  line-height: 1.222222222em; /* 22  / 18.000 = 1.222222222 */ /* 1.125 / 2 = 0.5625 */
+  padding: 0.611111111em 0.5625em 0.611111111em 0.5625em; /* 1.222222222 / 2 = 0.611111111 */
 }
 
 .resume-address-menu,
@@ -205,8 +214,8 @@ header address {
 
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
 
-/*  */
-@media screen and (min-width: 388px) {
+/* Change from collum to row when there is room, also happens when name goes from 2 ot 1 line */
+@media screen and (min-width: 398px) {
   /* Base Styles */
   /* Layout */
   /* Module Section */
@@ -217,7 +226,8 @@ header address {
   /* State */
 }
 
-/*  */
+/* Change when name/h1/h2 can fit larger size on 1 line to reflect perfect 1/5th style */
+/* Move to flex style for images */
 @media screen and (min-width: 582px) {
   /* Base Styles */
   h1,
@@ -247,19 +257,19 @@ header address {
   /* State */
 }
 
-/*  */
+/* Keep text on homepage readable */
 @media screen and (min-width: 672px) {
   /* Base Styles */
   /* Layout */
   #homepage {
-    padding: 1.222222222em 20%;
+    padding: 1.222222222em 20%; /* 22  / 18.000 = 1.222222222 */
   }
 
   /* Module Section */
   /* State */
 }
 
-/*  */
+/* Change when name/h1 can fit larger size on 1 line to reflect perfect 1/5th style */
 @media screen and (min-width: 840px) {
   /* Base Styles */
   h1 {
@@ -272,7 +282,8 @@ header address {
   /* State */
 }
 
-/*  */
+/* Stop text from growing to large to manage */
+/* Start managing resume text */
 @media screen and (min-width: 1072px) {
   /* Base Styles */
   html {
@@ -281,6 +292,7 @@ header address {
 
   /* Layout */
   #schools {
+    background: red;
     display: flex;
     flex-flow: row wrap;
   }
@@ -291,8 +303,9 @@ header address {
   }
 
   #schools li {
+    background: blue;
     flex: 1 0 auto;
-    width: 100%;
+    width: 50%;
   }
 
   /* State */
