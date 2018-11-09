@@ -7,6 +7,11 @@
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}html,.reset{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
 /* stylelint-enable */
 
+/* ======================================================== */
+/* This pattern is downloaded from www.subtlepatterns.com   */
+/* If you need more, that's where to get'em.                */
+/* ======================================================== */
+
 /* Custom Site Styles */
 /* Comments and Notes */
 
@@ -35,7 +40,8 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* Base Styles (element selectors; color, typography, and that's it)*/
 html {
   -background-color: #DDD;
-  background-image: url(/assets/img/baseline.png);
+  background-image: url(/assets/img/escheresque_ste.png);
+  -background-image: url(/assets/img/baseline.png);
   color: #222;
   font-family: Roboto, "Bai Jamjuree", Calibri, Helvetica, sans-serif;
   font-size: 1.125em;/* 18.000 / 16 = 1.125 */
@@ -46,10 +52,13 @@ html {
 }
 /*  */
 header {
-  background-color: orange;
+  background-color: #773D15;
+  border-radius: 0.611111111em 0.611111111em 0 0;
   display: flex;
   flex-flow: column wrap;
-  border-radius: 0.611111111em 0.611111111em 0.611111111em 0.611111111em;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
 }
 
 h1 {
@@ -57,16 +66,19 @@ h1 {
 }
 
 .nav-menu {
-  background-color: green;
+  background-color: #236412;
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;
   padding: 0em;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .nav-item {
-  text-align: center;
   padding: 0em 0.814814815em;
+  text-align: center;
 }
 
 .nav-item a:hover {
@@ -77,23 +89,19 @@ h1 {
 }
 
 .nav-item a {
-  -background: blue;
-  display: inherit;
-  text-align: center;
-  text-decoration: none;
+  border-radius: 0.55em;
   color: #222;
+  display: inherit;
+  font-family: "Bai Jamjuree", Roboto, Calibri, Helvetica, sans-serif;
   font-size: 1.5em;
   font-weight: 400;
   line-height: 1.629629630em;
-  font-family: "Bai Jamjuree", Roboto, Calibri, Helvetica, sans-serif;
-  font-weight: 400;
-
-  border-radius: .5em;
+  text-align: center;
+  text-decoration: none;
 }
 
 header address {
-  background: orange;
-  border-radius: 0 0 0.611111111em 0.611111111em;
+  background-color: #5B1043;
   font-size: 1.125em;/* 18.000 / 16 = 1.125 */
   font-weight: 400;
   line-height: 1.222222222em;/* 22  / 18.000 = 1.222222222 */
@@ -105,10 +113,14 @@ header address ol {
 header address ol li {
   padding: 0;
 }
+
+main {
+  background-color: #DDD;
+  padding: 0em 1.222222222em 0em 1.222222222em;
+}
   /* top | right | bottom | left */
 
 h1, h2, h3, h4 {
-  -background-color: yellow;
   font-family: "Bai Jamjuree", Roboto, Calibri, Helvetica, sans-serif;
   font-weight: 500;
 }
