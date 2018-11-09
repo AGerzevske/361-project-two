@@ -178,8 +178,7 @@ li ul {
   font-family: "Bai Jamjuree", Roboto, Calibri, Helvetica, sans-serif;
 }
 
-.job-achievements,
-.leadership {
+.job-achievements {
   list-style-type: circle;
 }
 
@@ -210,6 +209,16 @@ header address {
 .resume-address-menu,
 .resume-address-menu li {
   padding: 0;
+}
+
+#linkedin a {
+  color: #222;
+  text-decoration: none;
+}
+
+#linkedin a:hover {
+  color: blue;
+  text-decoration: underline;
 }
 
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
@@ -283,6 +292,7 @@ header address {
 }
 
 /* Stop text from growing to large to manage */
+/* I may revisit this in the future to allow it to grow more */
 /* Start managing resume text */
 @media screen and (min-width: 1072px) {
   /* Base Styles */
@@ -292,7 +302,6 @@ header address {
 
   /* Layout */
   #schools {
-    background: red;
     display: flex;
     flex-flow: row wrap;
   }
@@ -303,7 +312,6 @@ header address {
   }
 
   #schools li {
-    background: blue;
     flex: 1 0 auto;
     width: 50%;
   }
