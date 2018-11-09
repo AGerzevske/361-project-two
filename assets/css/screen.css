@@ -25,6 +25,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* Maths */
 /*      font-size      *//*         line-height        *//* elmt */
 /* 18.000 / 16 = 1.125 *//* 22  / 18.000 = 1.222222222 *//* html */
+/* 22.78125 / 18 = 1.265625 *//* 33  / 22.78125 = 1.448559670 *//* midl */
 /* 91.134 / 18 = 5.063 *//* 110 / 91.134 = 1.204291658 *//*  h1  */
 /* 60.750 / 18 = 3.375 *//* 88  / 60.750 = 1.448559671 *//*  h2  */
 /* 40.500 / 18 = 2.250 *//* 44  / 40.500 = 1.086419753 *//*  h3  */
@@ -49,10 +50,14 @@ html {
   line-height: 1.222222222em;/* 22  / 18.000 = 1.222222222 */
   overflow-wrap: break-word;
   padding: 1.222222222em 1.222222222em;/* TODO: whats this doing? */
+
+}
+p {
+  padding-bottom: 1.222222222em;
 }
 /*  */
 header {
-  background-color: #773D15;
+  background-color: #A43A3D;
   border-radius: 0.611111111em 0.611111111em 0 0;
   display: flex;
   flex-flow: column wrap;
@@ -66,7 +71,7 @@ h1 {
 }
 
 .nav-menu {
-  background-color: #236412;
+  background-color: #348630;
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;
@@ -101,7 +106,7 @@ h1 {
 }
 
 header address {
-  background-color: #5B1043;
+  background-color: #A43A3D;
   font-size: 1.125em;/* 18.000 / 16 = 1.125 */
   font-weight: 400;
   line-height: 1.222222222em;/* 22  / 18.000 = 1.222222222 */
@@ -117,6 +122,7 @@ header address ol li {
 main {
   background-color: #DDD;
   padding: 0em 1.222222222em 0em 1.222222222em;
+  border-radius: 0 0 0.611111111em 0.611111111em;
 }
   /* top | right | bottom | left */
 
@@ -190,9 +196,11 @@ img {
 
 .images li {
   box-sizing: border-box;
+  border-radius: 0.611111111em;
   padding: 0.277777778em; /* 5 / 18 = 0.277777778 */
 }
-/* Border-raidus */
+
+
 
 
 @media screen and (min-width: 388px) {
@@ -222,6 +230,12 @@ img {
     }
 }
 
+@media screen and (min-width: 672px) {
+  #homepage {
+    padding: 1.222222222em 20%;
+  }
+}
+
 @media screen and (min-width: 840px) {
     /* Base Styles */
   h1 {
@@ -234,11 +248,9 @@ img {
   /* Base Styles */
   .images li {
     width: 33.333333333%;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    align-self: center;
-
+  }
+  html {
+    width: 57.111111111em; /* (1072 - 44) / 18 = 57.111111111*/
   }
   /* Layout  */
   #schools {
@@ -249,6 +261,6 @@ img {
   /* Module/Modular Section  */
   #schools li {
     flex: 1 0 auto;
-    width: 50%;
+    width: 100%;
   }
 }
