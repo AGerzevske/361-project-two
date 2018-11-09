@@ -91,8 +91,8 @@ h3 {
 }
 
 h1 {
-  padding: 0 0.444444444em; /* 18 / 40.500 = 0.444444444 */
   order: 1;
+  padding: 0 0.444444444em; /* 18 / 40.500 = 0.444444444 */
   width: 100%;
 }
 
@@ -137,25 +137,25 @@ figcaption {
 /* Layout (id selectors; width/height, position, flexbox, grid) */
 
 #nav-page { /* header #nav-page */
-  order: 4;
-  flex: 1 0 auto;
-  width: 50%;
   background-color: #A43A3D;
+  flex: 1 0 auto;
   font-size: 1.125em; /* 18.000 / 16 = 1.125 */
   font-weight: 400;
   line-height: 1.222222222em; /* 22  / 18.000 = 1.222222222 */
+  order: 4;
   padding: 0.611111111em 1em; /* 18 = 1em */
+  width: 50%;
 }
 
 #resume-address {
-  order: 3;
-  flex: 1 0 auto;
-  width: 50%;
   background-color: #A43A3D;
+  flex: 1 0 auto;
   font-size: 1.125em; /* 18.000 / 16 = 1.125 */
   font-weight: 400;
   line-height: 1.222222222em; /* 22  / 18.000 = 1.222222222 */
+  order: 3;
   padding: 0.611111111em 1em; /* 18 = 1em */
+  width: 50%;
 }
 
 /* Module/Modular Section (class or descedent selectors; repeating specific styles) */
@@ -166,8 +166,8 @@ li ul {
 }
 
 .nav-site { /* header .nav-site*/
-  order: 2;
   flex: 1 0 auto;
+  order: 2;
   width: 100%;
 }
 
@@ -195,9 +195,9 @@ li ul {
   font-size: 1.5em; /* 27.000 / 18 = 1.500 */
   font-weight: 400;
   line-height: 1.629629629em; /* 44  / 27.000 = 1.629629629 */
+  padding: 0 0.666666666em; /* 18 / 27 = 0.666666666 */
   text-align: center;
   text-decoration: underline;
-  padding: 0 0.666666666em; /* 18 / 27 = 0.666666666 */
 }
 
 .nav-page-item {
@@ -206,9 +206,10 @@ li ul {
 
 .nav-page-item a {
   color: #222;
-  text-decoration: underline;
   overflow-wrap: break-word;
+  text-decoration: underline;
 }
+
 .nav-page-item a:hover {
   color: blue;
 }
@@ -259,7 +260,6 @@ li ul {
 #linkedin a:hover {
   color: blue;
 }
-
 
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
 
@@ -353,19 +353,26 @@ li ul {
   }
 
   /* Layout */
-  #schools {
+  #schools,
+  #jobs {
     display: flex;
     flex-flow: row wrap;
+  }
+
+  #sd129,
+  #best-buy,
+  #ync,
+  #main-event,
+  #iit,
+  #cod {
+    flex: 1 0 auto;
+    padding: 0 0.5em; /* arbitry .5em, need to switch to grid and do column gap */
+    width: 45%;
   }
 
   /* Module Section */
   .images li {
     width: 33.333333333%;
-  }
-
-  #schools li {
-    flex: 1 0 auto;
-    width: 50%;
   }
 
   /* State */
