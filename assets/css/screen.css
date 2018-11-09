@@ -12,7 +12,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* If you need more, that's where to get'em.                */
 /* ======================================================== */
 
-/* End of not mine*/
+/* End of not mine */
 /* Comments and Notes */
 
 /*  */
@@ -41,9 +41,10 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* 1.629629629 / 2 = 0.814814815 */
 
 /* top | right | bottom | left */
+/* vertical | horizontal */
 
 /* Custom Site Styles */
-/* Base Styles (element selectors; color, typography, and that's it)*/
+/* Base Styles (element selectors; color, typography, and that's it) */
 html {
   /* background-image: url(/assets/img/baseline.png); */
   background-image: url(/assets/img/escheresque_ste.png);
@@ -53,23 +54,25 @@ html {
   font-weight: 400;
   line-height: 1.222222222em; /* 22  / 18.000 = 1.222222222 */
   overflow-wrap: break-word;
-  padding: 1.222222222em 1.222222222em; /* 22  / 18.000 = 1.222222222 */
+  padding: 1.222222222em; /* 22  / 18.000 = 1.222222222 */
 }
 
 header {
   background-color: #A43A3D;
   border-radius: 0.611111111em 0.611111111em 0 0; /* 1.222222222 / 2 = 0.611111111 */
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   min-height: 0;
   min-width: 0;
   overflow: hidden;
+  overflow-wrap: break-word;
+
 }
 
 main {
   background-color: #DDD;
   border-radius: 0 0 0.611111111em 0.611111111em; /* 1.222222222 / 2 = 0.611111111 */
-  padding: 0 1.222222222em 0 1.222222222em; /* 22  / 18.000 = 1.222222222 */
+  padding: 0 1.222222222em; /* 22  / 18.000 = 1.222222222 */
 }
 
 h1,
@@ -88,7 +91,9 @@ h3 {
 }
 
 h1 {
-  padding: 0 0.305555555em; /* 1.222222222 / 4 = 0.305555555 */
+  padding: 0 0.444444444em; /* 18 / 40.500 = 0.444444444 */
+  order: 1;
+  width: 100%;
 }
 
 h3 {
@@ -131,11 +136,39 @@ figcaption {
 
 /* Layout (id selectors; width/height, position, flexbox, grid) */
 
+#nav-page { /* header #nav-page */
+  order: 4;
+  flex: 1 0 auto;
+  width: 50%;
+  background-color: #A43A3D;
+  font-size: 1.125em; /* 18.000 / 16 = 1.125 */
+  font-weight: 400;
+  line-height: 1.222222222em; /* 22  / 18.000 = 1.222222222 */
+  padding: 0.611111111em 1em; /* 18 = 1em */
+}
+
+#resume-address {
+  order: 3;
+  flex: 1 0 auto;
+  width: 50%;
+  background-color: #A43A3D;
+  font-size: 1.125em; /* 18.000 / 16 = 1.125 */
+  font-weight: 400;
+  line-height: 1.222222222em; /* 22  / 18.000 = 1.222222222 */
+  padding: 0.611111111em 1em; /* 18 = 1em */
+}
+
 /* Module/Modular Section (class or descedent selectors; repeating specific styles) */
 
 li ol,
 li ul {
   padding-left: 1.222222222em; /* 22  / 18.000 = 1.222222222 */
+}
+
+.nav-site { /* header .nav-site*/
+  order: 2;
+  flex: 1 0 auto;
+  width: 100%;
 }
 
 .nav-menu {
@@ -150,7 +183,7 @@ li ul {
 }
 
 .nav-item { /* nav-menu li */
-  padding: 0 0.814814815em; /* 1.629629629 / 2 = 0.814814815 */
+  padding: 0;
   text-align: center;
 }
 
@@ -161,9 +194,23 @@ li ul {
   font-family: "Bai Jamjuree", Roboto, Calibri, Helvetica, sans-serif;
   font-size: 1.5em; /* 27.000 / 18 = 1.500 */
   font-weight: 400;
-  line-height: 1.62962963em; /* 44  / 27.000 = 1.629629629 */
+  line-height: 1.629629629em; /* 44  / 27.000 = 1.629629629 */
   text-align: center;
-  text-decoration: none;
+  text-decoration: underline;
+  padding: 0 0.666666666em; /* 18 / 27 = 0.666666666 */
+}
+
+.nav-page-item {
+  padding: 0;
+}
+
+.nav-page-item a {
+  color: #222;
+  text-decoration: underline;
+  overflow-wrap: break-word;
+}
+.nav-page-item a:hover {
+  color: blue;
 }
 
 .nav-item a:hover {
@@ -198,28 +245,21 @@ li ul {
   padding: 0.277777778em; /* 5 / 18 = 0.277777778 */
 }
 
-header address {
-  background-color: #A43A3D;
-  font-size: 1.125em; /* 18.000 / 16 = 1.125 */
-  font-weight: 400;
-  line-height: 1.222222222em; /* 22  / 18.000 = 1.222222222 */ /* 1.125 / 2 = 0.5625 */
-  padding: 0.611111111em 0.5625em 0.611111111em 0.5625em; /* 1.222222222 / 2 = 0.611111111 */
-}
 
-.resume-address-menu,
-.resume-address-menu li {
+#resume-address-menu,
+#resume-address-menu li {
   padding: 0;
 }
 
 #linkedin a {
   color: #222;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 #linkedin a:hover {
   color: blue;
-  text-decoration: underline;
 }
+
 
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
 
@@ -239,6 +279,10 @@ header address {
 /* Move to flex style for images */
 @media screen and (min-width: 582px) {
   /* Base Styles */
+  h1 {
+    padding: 0 0.296296296em; /* 18 / 60.750 = 0.296296296 */
+  }
+
   h1,
   h2 {
     font-size: 3.375em; /* 60.750 / 18 = 3.375 */
@@ -251,6 +295,14 @@ header address {
   }
 
   /* Layout */
+  #nav-page {
+    width: 42.6116838%;
+  }
+
+  #resume-address {
+    width: 42.6116838%;
+  }
+
   /* Module Section */
   .images {
     display: flex;
@@ -259,7 +311,6 @@ header address {
 
   .images li {
     flex: 1 0 auto;
-    float: left;
     width: 50%;
   }
 
@@ -284,6 +335,7 @@ header address {
   h1 {
     font-size: 5.063em; /* 91.134 / 18 = 5.063 */
     line-height: 1.204291658em; /* 110 / 91.134 = 1.204291658 */
+    padding: 0 0.197511356em; /* 18 / 91.134 = 0.197511356 */
   }
 
   /* Layout */
