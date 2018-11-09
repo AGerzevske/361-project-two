@@ -22,6 +22,11 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* Module/Modular Section (class or descedent selectors; repeating specific styles) */
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
 
+/* Base Styles */
+/* Layout */
+/* Module Section */
+/* State */
+
 /* Maths */
 /*      font-size      *//*         line-height        *//* elmt */
 /* 18.000 / 16 = 1.125 *//* 22  / 18.000 = 1.222222222 *//* html */
@@ -33,16 +38,10 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* 12.006 / 18 = 0.667 *//* 22  / 12.006 = 1.376145261 *//*  sm  */
 /* top | right | bottom | left */
 
-/* NOTE: I had to do sudo npm i -g stylelint@8.4.0 since */
-/* NOTE: stylelint refeuses to install on my machine using info from its github page*/
-/* NOTE: even after tying to install it diffrent ways and making .stylelinrc */
-/* NOTE: the command stylelint is still not present*/
-
 /* Base Styles (element selectors; color, typography, and that's it)*/
 html {
-  -background-color: #DDD;
+  /* background-image: url(/assets/img/baseline.png); */
   background-image: url(/assets/img/escheresque_ste.png);
-  -background-image: url(/assets/img/baseline.png);
   color: #222;
   font-family: Roboto, "Bai Jamjuree", Calibri, Helvetica, sans-serif;
   font-size: 1.125em;/* 18.000 / 16 = 1.125 */
@@ -50,12 +49,8 @@ html {
   line-height: 1.222222222em;/* 22  / 18.000 = 1.222222222 */
   overflow-wrap: break-word;
   padding: 1.222222222em 1.222222222em;/* TODO: whats this doing? */
+}
 
-}
-p {
-  padding-bottom: 1.222222222em;
-}
-/*  */
 header {
   background-color: #A43A3D;
   border-radius: 0.611111111em 0.611111111em 0 0;
@@ -66,75 +61,29 @@ header {
   overflow: hidden;
 }
 
-h1 {
-  padding: 0em 0.305555555em;
-}
-
-.nav-menu {
-  background-color: #348630;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  padding: 0em;
-  min-height: 0;
-  min-width: 0;
-  overflow: hidden;
-}
-
-.nav-item {
-  padding: 0em 0.814814815em;
-  text-align: center;
-}
-
-.nav-item a:hover {
-  background-color: #33cc33;
-}
-.nav-item a:active {
-  background-color: #70db70;
-}
-
-.nav-item a {
-  border-radius: 0.55em;
-  color: #222;
-  display: inherit;
-  font-family: "Bai Jamjuree", Roboto, Calibri, Helvetica, sans-serif;
-  font-size: 1.5em;
-  font-weight: 400;
-  line-height: 1.629629630em;
-  text-align: center;
-  text-decoration: none;
-}
-
-header address {
-  background-color: #A43A3D;
-  font-size: 1.125em;/* 18.000 / 16 = 1.125 */
-  font-weight: 400;
-  line-height: 1.222222222em;/* 22  / 18.000 = 1.222222222 */
-  padding: 0.611111111em 0.5625em 0.611111111em 0.5625em;
-}
-header address ol {
-  padding: 0;
-}
-header address ol li {
-  padding: 0;
-}
-
 main {
   background-color: #DDD;
-  padding: 0em 1.222222222em 0em 1.222222222em;
+  padding: 0 1.222222222em 0 1.222222222em;
   border-radius: 0 0 0.611111111em 0.611111111em;
 }
-  /* top | right | bottom | left */
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "Bai Jamjuree", Roboto, Calibri, Helvetica, sans-serif;
   font-weight: 500;
 }
-/*  */
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-size: 2.25em;  /* 40.500 / 18 = 2.250 */
   line-height: 1.629629629em; /* 66  / 40.500 = 1.086419753 */
+}
+
+h1 {
+  padding: 0 0.305555555em;
 }
 
 h4 {
@@ -147,9 +96,21 @@ small {
   line-height: 1.376145261em; /* 22  / 12.006 = 1.376145261 */
 }
 
-audio, img, video {
+p {
+  padding-bottom: 1.222222222em;
+}
+
+audio,
+img,
+video {
   display: block;
   max-width: 100%;
+}
+
+ol,
+ul,
+li {
+  padding-bottom: 0.611111111em; /* 1.222222222 / 2 = 0.611111111 */
 }
 
 figcaption {
@@ -162,32 +123,61 @@ figcaption {
 /* Layout (id selectors; width/height, position, flexbox, grid) */
 
 /* Module/Modular Section (class or descedent selectors; repeating specific styles) */
-li, ol, ul {
-  padding-bottom: 0.611111111em; /* 1.222222222 / 2 = 0.611111111 */
+
+li ol,
+li ul {
+  padding-left: 1.222222222em; /* 22  / 18.000 = 1.222222222 */
 }
 
-li ol, li ul {
-  padding-left: 1.222222222em; /* 22  / 18.000 = 1.222222222 */
+.nav-menu {
+  background-color: #348630;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  padding: 0;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.nav-item { /* nav-menu li */
+  padding: 0 0.814814815em;
+  text-align: center;
+}
+
+.nav-item a {
+  border-radius: 0.55em;
+  color: #222;
+  display: inherit;
+  font-family: "Bai Jamjuree", Roboto, Calibri, Helvetica, sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.62962963em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  background-color: #33cc33;
+}
+
+.nav-item a:active {
+  background-color: #70db70;
 }
 
 .employer {
   font-family: "Bai Jamjuree", Roboto, Calibri, Helvetica, sans-serif;
 }
 
-
-
-.job-achievements, .leadership {
+.job-achievements,
+.leadership {
   list-style-type: circle;
 }
 
 .degrees {
   font-weight: 600;
 }
-/* State (repeat the structure above; media queries, JavaScript-dependent styles) */
-img {
-  display: block;
-  max-width: 100%;
-}
+
 .images {
   background: #222;
   overflow: auto;
@@ -200,67 +190,110 @@ img {
   padding: 0.277777778em; /* 5 / 18 = 0.277777778 */
 }
 
+header address {
+  background-color: #A43A3D;
+  font-size: 1.125em;/* 18.000 / 16 = 1.125 */
+  font-weight: 400;
+  line-height: 1.222222222em;/* 22  / 18.000 = 1.222222222 */
+  padding: 0.611111111em 0.5625em 0.611111111em 0.5625em;
+}
 
+.resume-address-menu,
+.resume-address-menu li {
+  padding: 0;
+}
 
+/* State (repeat the structure above; media queries, JavaScript-dependent styles) */
 
+/*  */
 @media screen and (min-width: 388px) {
-  /* Module/Modular Section */
+  /* Base Styles */
+  /* Layout */
+  /* Module Section */
   .nav-menu {
     flex-flow: row wrap;
   }
-}
-@media screen and (min-width: 582px) {
-    /* Base Styles */
-    h1, h2 {
-      font-size: 3.375em; /* 60.750 / 18 = 3.375 */
-      line-height: 1.448559671em; /* 88  / 60.750 = 1.448559671 */
-      overflow-wrap: normal;
-    }
-    .images {
-      display: flex;
-      flex-flow: row wrap-reverse;
-    }
-    .images li {
-      flex: 1 0 auto;
-      float: left;
-      width: 50%;
-    }
-    figcaption {
-      clear: both;
-    }
+
+  /* State */
 }
 
+/*  */
+@media screen and (min-width: 582px) {
+  /* Base Styles */
+  h1,
+  h2 {
+    font-size: 3.375em; /* 60.750 / 18 = 3.375 */
+    line-height: 1.448559671em; /* 88  / 60.750 = 1.448559671 */
+    overflow-wrap: normal;
+  }
+
+  figcaption {
+    clear: both;
+  }
+
+  /* Layout */
+  /* Module Section */
+  .images {
+    display: flex;
+    flex-flow: row wrap-reverse;
+  }
+
+  .images li {
+    flex: 1 0 auto;
+    float: left;
+    width: 50%;
+  }
+
+  /* State */
+}
+
+/*  */
 @media screen and (min-width: 672px) {
+  /* Base Styles */
+  /* Layout */
   #homepage {
     padding: 1.222222222em 20%;
   }
+
+  /* Module Section */
+  /* State */
 }
 
+/*  */
 @media screen and (min-width: 840px) {
-    /* Base Styles */
+  /* Base Styles */
   h1 {
     font-size: 5.063em; /* 91.134 / 18 = 5.063 */
     line-height: 1.204291658em; /* 110 / 91.134 = 1.204291658 */
   }
+
+  /* Layout */
+  /* Module Section */
+  /* State */
 }
 
+/*  */
 @media screen and (min-width: 1072px) {
   /* Base Styles */
-  .images li {
-    width: 33.333333333%;
-  }
   html {
     width: 57.111111111em; /* (1072 - 44) / 18 = 57.111111111*/
   }
-  /* Layout  */
+
+  /* Layout */
   #schools {
     display: flex;
     flex-flow: row wrap;
   }
 
-  /* Module/Modular Section  */
+  /* Module Section */
+  .images li {
+    width: 33.333333333%;
+  }
+
   #schools li {
     flex: 1 0 auto;
     width: 100%;
   }
+
+  /* State */
 }
