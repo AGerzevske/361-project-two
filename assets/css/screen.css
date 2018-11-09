@@ -168,16 +168,7 @@ li ol, li ul {
   font-family: "Bai Jamjuree", Roboto, Calibri, Helvetica, sans-serif;
 }
 
-.images {
-  background: #222;
-  overflow: auto;
-  padding: 0.277777778em; /* 5 / 18 = 0.277777778 */
-}
 
-.images li {
-  box-sizing: border-box;
-  padding: 0.277777778em; /* 3 / 18 = 0.277777778 */
-}
 
 .job-achievements, .leadership {
   list-style-type: circle;
@@ -187,7 +178,20 @@ li ol, li ul {
   font-weight: 600;
 }
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
+img {
+  display: block;
+  max-width: 100%;
+}
+.images {
+  background: #222;
+  overflow: auto;
+  padding: 0.277777778em; /* 5 / 18 = 0.277777778 */
+}
 
+.images li {
+  box-sizing: border-box;
+  padding: 0.277777778em; /* 5 / 18 = 0.277777778 */
+}
 /* Border-raidus */
 
 
@@ -204,6 +208,18 @@ li ol, li ul {
       line-height: 1.448559671em; /* 88  / 60.750 = 1.448559671 */
       overflow-wrap: normal;
     }
+    .images {
+      display: flex;
+      flex-flow: row wrap-reverse;
+    }
+    .images li {
+      flex: 1 0 auto;
+      float: left;
+      width: 50%;
+    }
+    figcaption {
+      clear: both;
+    }
 }
 
 @media screen and (min-width: 840px) {
@@ -216,7 +232,14 @@ li ol, li ul {
 
 @media screen and (min-width: 1072px) {
   /* Base Styles */
+  .images li {
+    width: 33.333333333%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
 
+  }
   /* Layout  */
   #schools {
     display: flex;
