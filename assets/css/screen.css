@@ -297,10 +297,12 @@ li ul {
   /* Layout */
   #nav-page {
     width: 42.6116838%;
+    /* So it moves over at the right time, need to change flex, or move to grid to resolve */
   }
 
   #resume-address {
     width: 42.6116838%;
+    /* So it moves over at the right time, need to change flex, or move to grid to resolve */
   }
 
   /* Module Section */
@@ -368,6 +370,7 @@ li ul {
     flex: 1 0 auto;
     padding: 0 0.5em; /* arbitry .5em, need to switch to grid and do column gap */
     width: 45%;
+    /* So it moves over at the right time, need to change flex, or move to grid to resolve */
   }
 
   /* Module Section */
